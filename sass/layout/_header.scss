@@ -1,34 +1,48 @@
+/* ************************ header **************************** */
 
 header { /*this is a flex container.*/
     width: 100%;
-    
-    display: flex;
-    flex-flow: column wrap; /*top header, middle header and nav are stacked as columns*/
-    justify-content: flex-start;
-    align-items: center;
-    
-}
-
-.header-top { /*this is a a flex-item*/
-    flex: 1;
     background-color: $color-background-primary;
-    width: 100%;
-    padding: 0.66rem 0;
-
-    & img{ /*this is a a flex-item*/
-        margin-left: 0.5rem;
-        margin-right: 1rem;
-    }
-
-    & h1{ /*this is a a flex-item*/
-        display: inline;
-        text-transform: uppercase;
-        font-size: 1rem;
-    }
+    color: $text-color-primary;
 }
 
-.header-middle { /*this is a a flex-item*/
-    flex: 1;
+.logo-container img {
+    height: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+}
 
+.name-container a {
+    text-transform: uppercase;
+    color:$text-color-primary;
+    text-decoration: none;
+}
+
+.header-hero { /*this is a a flex-item*/
+    flex: 1;
     height:25rem;
+    width: 100%;
+    background-image: url(../img/moto.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-caption {
+    background-color: $color-background-primary;
+    width: 20rem;
+    padding: 2rem 3rem;
+
+    & h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    & h3 {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+    }
 }

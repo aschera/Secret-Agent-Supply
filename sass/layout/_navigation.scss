@@ -1,8 +1,28 @@
+/* ************************ navigation **************************** */
 
-
-
-nav{ /*this is a a flex-item*/
+nav { /*this is a a flex-item*/
     flex: 1;
     background-color: $color-background-secondary;
     width: 100%;
+}
+
+.nav-wrapper {
+    padding:0.75rem 0;
+}
+
+.nav-list { /*this is a flex container.*/
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item { /*this is a flex item*/
+        display: inline;
+
+        & a {
+            text-decoration: none;
+            color: $text-color-primary;
+        }
+    }
 }

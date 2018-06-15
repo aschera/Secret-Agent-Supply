@@ -1,0 +1,30 @@
+
+/* ********************product gallery ***************************** */
+
+.gallery {
+    
+}
+
+.gallery__item {
+    width:30%;
+    background-color: $color-background-primary;
+    border: 4px solid $color-background-primary;
+}
+
+.gallery__image{
+    padding: 2rem 0;
+    height: 9rem;
+    width:90%;
+    overflow:hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & img {
+        max-width: 100%;
+        height: auto;
+        flex:auto;
+        background-color: $color-background-tertiary;
+        
+    }
+}
