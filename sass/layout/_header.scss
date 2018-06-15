@@ -1,0 +1,34 @@
+
+header { /*this is a flex container.*/
+    width: 100%;
+    
+    display: flex;
+    flex-flow: column wrap; /*top header, middle header and nav are stacked as columns*/
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.header-top { /*this is a a flex-item*/
+    flex: 1;
+    background-color: $color-background-primary;
+    width: 100%;
+    padding: 0.66rem 0;
+
+    & img{ /*this is a a flex-item*/
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+    }
+
+    & h1{ /*this is a a flex-item*/
+        display: inline;
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
+}
+
+.header-middle { /*this is a a flex-item*/
+    flex: 1;
+
+    height:25rem;
+}

@@ -8,9 +8,10 @@
 
 html{
     font-family: Helvetica, sans-serif;
-    /*base font is 18px: 112.5% (18/16) */
-    color: $text-color-primary;
-    font-size: 112.5%; 
+
+    // This defines what 1rem is
+    font-size: 137.5%; //1 rem = 10px; 22px/16px = 137.5%
+
 }
 
 
