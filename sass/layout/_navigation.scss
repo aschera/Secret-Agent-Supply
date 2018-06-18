@@ -1,33 +1,31 @@
-/* ************************ navigation **************************** */
 
-nav { /*this is a a flex-item*/
-    flex: 1 0;
-    background-color: $color-background-secondary;
-    width: 100%;
 
-    &.mobile {
-        display: none;
-
-    }
-}
-
-.nav-wrapper {
-    padding:0.75rem 0;
-}
-
-.nav-list { /*this is a flex container.*/
-    
+/*  *-*-*-*-*-*-*-*-*-* Navigation Bar *-*-*-*-*-*-*-*-*-* */
+/*  *-*-*-*-*-*-*-*-*-* *-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-* */
+nav {
+    background-color: firebrick;
+    color: white;
+  }
+  
+  nav ul {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+  }
+  
+  .mobile-nav {
+    display: none;
+  }
 
-    &__item { /*this is a flex item*/
-        display: inline;
-
-        & a {
-            text-decoration: none;
-            color: $text-color-primary;
-        }
+  /* ^*^*^*^*^*^* MEDIA queries medium screen ^*^*^*^*^*^* */
+  @media only screen and (max-width: 1024px) {
+    nav ul {
+      display: none;
     }
-}
+  
+    .mobile-nav {
+      display: block;
+      text-align: center;
+    }
+  }

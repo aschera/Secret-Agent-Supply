@@ -1,25 +1,19 @@
-/* ************************ basic settings **************************** */
-
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
+/*  *-*-*-*-*-*-*-*-*-* Base *-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+/*  *-*-*-*-*-*-*-*-*-* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+html { 
+    box-sizing: border-box; 
+  }
+  *, *:before, *:after { 
     box-sizing: inherit;
-}
-
-html{
-    font-family: Helvetica, sans-serif;
-    /*base font is 18px: 112.5% (18/16) */
-    color: $text-color-primary;
-    font-size: 112.5%; 
-}
-
-main { /*margin between content and header */
-    margin-top: 3rem;} 
-
-.nav-list2 button {/* the mobile menu is hidden as default */
-    display:none;} 
-
-
-
+  }
+  
+  /* Universal Styles */
+  
+  html {
+    font-size: 18px;
+  }
+  
+  body {
+    font-family: "Helvetica", sans-serif;
+    line-height: 1.4;
+  }

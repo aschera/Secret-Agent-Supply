@@ -1,48 +1,65 @@
-/* ************************ header **************************** */
 
-header { /*this is a flex container.*/
-    width: 100%;
-    background-color: $color-background-primary;
-    color: $text-color-primary;
-}
 
-.logo-container img {
+/*  *-*-*-*-*-*-*-*-*-* Header*-*-*-*-*-*-*-*-*-* */
+/*  *-*-*-*-*-*-*-*-*-* *-*-*-*-*-*-*-*-*-*-*-*-* */
+.company {
+    background-color: black;
+    color: white;
+  }
+  
+  .company .container {
+    display: flex;
+    align-items: center;
+    padding: .66rem 0 .66rem 0.5rem;
+  }
+  
+  .company img {
     height: 1.5rem;
-    padding-left: 0.5rem;
     padding-right: 1rem;
-}
-
-.name-container a {
-    text-transform: uppercase;
-    color:$text-color-primary;
-    text-decoration: none;
-}
-
-.header-hero { /*this is a a flex-item*/
-    flex: 1;
-    height:25rem;
-    width: 100%;
-    background-image: url(../img/moto.jpeg);
-    background-position: center;
+  }
+  
+/*  *-*-*-*-*-*-*-*-*-* Banner *-*-*-*-*-*-*-*-*-* */
+/*  *-*-*-*-*-*-*-*-*-* *-*-*-*-*-*-*-*-*-*-*-*-*-**/
+  .main-banner {
+    background: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-}
-
-.hero-caption {
-    background-color: $color-background-primary;
+    height: 25rem;
+  }
+  
+  .headline {
+    position: relative;
+    top: 9rem;
     width: 20rem;
     padding: 2rem 3rem;
-
-    & h2 {
-        font-size: 2rem;
-        font-weight: bold;
-        text-transform: uppercase;
+    background-color: black;
+    color: white;
+  }
+  
+  .headline h1 {
+    margin: 0.25rem 0;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  /* ^*^*^*^*^*^* MEDIA queries small screen ^*^*^*^*^*^* */
+  @media only screen and (max-width: 470px) {
+    .main-banner {
+      height: 15rem;
     }
-
-    & h3 {
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 0.25rem;
+  
+    .headline {
+      width: 100%;
+      padding: 1rem 2rem;
+      top: 10rem;
     }
-}
+  
+    .headline h4 {
+      font-size: .77rem;
+    }
+  
+    .headline h1 {
+      font-size: 1rem;
+    }
+  }
