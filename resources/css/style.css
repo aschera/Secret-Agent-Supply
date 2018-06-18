@@ -1,14 +1,11 @@
 /*  *-*-*-*-*-*-*-*-*-* Base *-*-*-*-*-*-*-*-*-*-*-*-*-*- */
 /*  *-*-*-*-*-*-*-*-*-* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 18px; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
-
-/* Universal Styles */
-html {
-  font-size: 18px; }
 
 body {
   font-family: "Helvetica", sans-serif;
@@ -23,14 +20,20 @@ h4 {
 /* Products and Information*/
 .products,
 .business-info {
+  /* flex container */
+  /* flex-direction: row is default */
+  /* flex-wrap: nowrap is default */
+  /* align-items: stretch is default*/
   display: flex;
   justify-content: space-between;
   margin-top: 3rem; }
 
 .product {
+  /* flex item */
   width: 30%; }
 
 .product-image {
+  /* flex container */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +42,7 @@ h4 {
   border: 4px solid black; }
 
 .product-image img {
+  /* flex item */
   max-width: 8rem; }
 
 .description {
@@ -49,6 +53,7 @@ h4 {
   color: white; }
 
 .info {
+  /* flex item */
   width: 35%; }
 
 .info .title {
