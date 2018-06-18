@@ -2,9 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Secret Agent Supply Inc.</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Secret Agent Supply Inc. We sell Eyewear, Apparel, Gadgets,
+            Vehicles and Glasses.</title>
+        <meta name="description" content="Secret Agent Supply Inc. We sell Eyewear, Apparel, Gadgets, Vehicles and Glasses.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="./resources/css/reset.css"><!-- resets CSS margins and such. NEEDS to go first!-->
 
@@ -31,6 +32,7 @@
                     </div>
                 </div>
                 
+                <!-- START hero header -->
                 <div class="header-hero">
                     <div class="container row-start--2">
                         <div class="hero-caption">
@@ -41,7 +43,8 @@
                 </div>
 
                 <nav>
-                    <div class="container nav-wrapper">
+                <!-- START navigation Desktop -->
+                    <div class="container nav-wrapper desktop">
                         <ul class="nav-list">
                             <li class="nav-list__item"><a href="#" alt="">Eyewear</a></li>
                             <li class="nav-list__item"><a href="#" alt="">Apparel</a></li>
@@ -51,36 +54,59 @@
                             <li class="nav-list__item"><a href="#" alt="">Contact</a></li>
                         </ul>
                     </div>
+                    <div class="container nav-wrapper mobile">
+                        <div class="nav-list2">
+                           <button class="nav-list__item"><a href="#" alt="">Menu</a></button>
+                        </div>
+                    </div>
                 </nav>
+
+
             </header>
 
 <!-- START main -->
             <main>
-                <div class="gallery">
+                <!-- START product gallery -->
+                <section class="gallery">
                     <div class="container row-space-start--3">
                         <div class="gallery__item">
-                            <div class="gallery__image">
-                                <img src="./resources/img/pen.png" alt="Exploding pen">
+                            <div class="gallery__image gallery__image--1">
                             </div>
                             <p>Exploding Pen</p>
                         </div>
-                        <div class="gallery__item">
-                            <div class="gallery__image">
-                                <img src="./resources/img/watch.png" alt="cellular watch">
+                        <div class="gallery__item hidden-on-mobile">
+                            <div class="gallery__image gallery__image--2">
                             </div>
                             <p>Cellular Watch</p>
                         </div>
-                        <div class="gallery__item">
-                            <div class="gallery__image">
-                                <img src="./resources/img/glasses.png" alt="thermal glasses">
+                        <div class="gallery__item hidden-on-tablet hidden-on-mobile ">
+                            <div class="gallery__image gallery__image--3">
                             </div>
                             <p>Thermal Glasses</p>
                         </div>
                     </div>
-                </div>
+                </section>
+                
+                <section class="infofields">
+                    <div class="container row-space-start--3">
+                        <div class="info-item">
+                            <p class="info-item--header">Location</p>
+                            <p class="info-item--info">-47.346436, 84.32354</p>
+                        </div>
+                        <div class="info-item">
+                            <p class="info-item--header">Hours</p>
+                            <p class="info-item--info">0800 - 1800</p>
+                        </div>
+                    </div>
+                </section>
             </main>
 
-
-
+            <footer>
+                <div class=" container row-space-start--4">
+                    <p class="copyright-info">
+                        Copyright Secret Agent Supply Inc.
+                    </p>       
+                </div>
+            </footer>
     </body>
 </html>

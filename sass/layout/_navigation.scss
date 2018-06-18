@@ -1,9 +1,14 @@
 /* ************************ navigation **************************** */
 
 nav { /*this is a a flex-item*/
-    flex: 1;
+    flex: 1 0;
     background-color: $color-background-secondary;
     width: 100%;
+
+    &.mobile {
+        display: none;
+
+    }
 }
 
 .nav-wrapper {

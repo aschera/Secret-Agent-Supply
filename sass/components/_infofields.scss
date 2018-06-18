@@ -1,0 +1,23 @@
+
+/* ******************** company location and opening hours ***************************** */
+
+
+.infofields  {
+    
+}
+
+.info-item{
+    width: 35%;
+
+    &--header {
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: $text-color-primary; 
+        background-color:  $color-background-primary;  
+    }
+
+    &--info {
+        color: $color-background-primary;
+    }
+}

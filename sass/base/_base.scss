@@ -15,9 +15,11 @@ html{
     font-size: 112.5%; 
 }
 
+main { /*margin between content and header */
+    margin-top: 3rem;} 
 
-
-
+.nav-list2 button {/* the mobile menu is hidden as default */
+    display:none;} 
 
 
 

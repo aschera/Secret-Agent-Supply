@@ -12,32 +12,74 @@ html {
   color: white;
   font-size: 112.5%; }
 
-/* ********************product gallery ***************************** */
+main {
+  /*margin between content and header */
+  margin-top: 3rem; }
+
+.nav-list2 button {
+  /* the mobile menu is hidden as default */
+  display: none; }
+
+/* ******************** product gallery ***************************** */
 .gallery__item {
   width: 30%;
-  background-color: black;
+  background-color: white;
   border: 4px solid black; }
+  .gallery__item p {
+    background-color: black;
+    padding: 0.5rem;
+    text-align: center; }
 
 .gallery__image {
-  padding: 2rem 0;
+  margin: 2rem;
   height: 9rem;
-  width: 90%;
   overflow: hidden;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  .gallery__image img {
-    max-width: 100%;
-    height: auto;
-    flex: auto;
-    background-color: white; }
+  max-width: 100%; }
+  .gallery__image--1 {
+    background-image: url(../img/pen.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .gallery__image--2 {
+    background-image: url(../img/watch.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .gallery__image--3 {
+    background-image: url(../img/glasses.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
 
+/* ******************** company location and opening hours ***************************** */
+.info-item {
+  width: 35%; }
+  .info-item--header {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    background-color: black; }
+  .info-item--info {
+    color: black; }
+
+footer {
+  margin-top: 4rem;
+  width: 100%;
+  height: 5rem;
+  background-color: black; }
+
+.copyright-info {
+  color: white; }
+
+/* ************************ center alignment of content **************************** */
 .container {
   width: 960px;
   margin: 0 auto; }
 
 /* ************************ flexbox **************************** */
 .row-start--1 {
+  /* header with logo and company name */
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -45,20 +87,28 @@ html {
   padding: 0.66rem 0; }
 
 .row-start--2 {
+  /* hero header with bg-image */
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  height: 100%;
-  /*needs height: so it displays center*/ }
+  height: 100%; }
 
 .row-space-start--3 {
+  /* gallery and info fields */
   margin-top: 3rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-content: center;
   align-items: center; }
+
+.row-space-start--4 {
+  /* footer */
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 100%; }
 
 /* ************************ header **************************** */
 header {
@@ -104,9 +154,11 @@ header {
 /* ************************ navigation **************************** */
 nav {
   /*this is a a flex-item*/
-  flex: 1;
+  flex: 1 0;
   background-color: firebrick;
   width: 100%; }
+  nav.mobile {
+    display: none; }
 
 .nav-wrapper {
   padding: 0.75rem 0; }
@@ -123,3 +175,127 @@ nav {
     .nav-list__item a {
       text-decoration: none;
       color: white; }
+
+/* **************** media queries ***************************** */
+@media only screen and (max-width: 1024px) {
+  /*grid */
+  .container {
+    width: 900px;
+    margin: 0 auto; }
+  /* menu */
+  .desktop {
+    display: none; }
+  .mobile {
+    display: block; }
+  .nav-list2 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center; }
+    .nav-list2__item {
+      /*this is a flex item*/
+      display: inline; }
+      .nav-list2__item a {
+        text-decoration: none;
+        color: white; }
+  .nav-list2 button {
+    display: block;
+    align-items: flex-start;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-family: Helvetica, sans-serif;
+    cursor: default;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 0;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    border-image: none; }
+  /* product gallery */
+  .hidden-on-tablet {
+    display: none; }
+  /*third image is hidden on tablets*/
+  .gallery__item {
+    width: 47%; }
+  .gallery__image--1 {
+    order: 2;
+    /*show watch second */ }
+  .gallery__image--2 {
+    order: 1;
+    /*show pen first*/ }
+  .infofields {
+    margin-top: 3rem; } }
+
+@media only screen and (max-width: 470px) {
+  /* grid */
+  .container {
+    width: 450px;
+    margin: 0 auto; }
+  /* header */
+  .header-hero {
+    height: 15rem; }
+  .hero-caption {
+    padding: 1rem 2rem;
+    margin-top: 10rem; }
+    .hero-caption h3 {
+      font-size: 0.77rem; }
+    .hero-caption h2 {
+      font-size: 1rem; }
+  /* menu */
+  .desktop {
+    display: none; }
+  .mobile {
+    display: block; }
+  .nav-list2 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center; }
+    .nav-list2__item {
+      /*this is a flex item*/
+      display: inline; }
+      .nav-list2__item a {
+        text-decoration: none;
+        color: white; }
+  .nav-list2 button {
+    display: block;
+    align-items: flex-start;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-family: Helvetica, sans-serif;
+    cursor: default;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 0;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    border-image: none; }
+  /* product gallery */
+  .hidden-on-mobile {
+    display: none; }
+  /*third image is hidden on tablets*/
+  .gallery__item {
+    width: 90%;
+    margin: 0 auto; }
+  .row-space-start--3 {
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between; }
+  .info-item {
+    width: 90%;
+    margin: 0 auto; }
+  /* footer */
+  .row-space-start--4 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100%; } }
